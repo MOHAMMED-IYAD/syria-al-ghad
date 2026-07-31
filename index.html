@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+
+        <div class="container">
+
+            <div class="row align-items-center w-100">
+
+                <!-- Right Logo -->
+                <div class="col-lg-2 col-6">
+
+                    <a href="#" class="d-flex justify-content-start">
+                        <img class="logo" src="img/first logo.png" alt="School Logo" height="70">
+                    </a>
+
+                </div>
+
+                <!-- Center Navigation -->
+                <div class="col-lg-7 d-none d-lg-block">
+
+                    <ul class="navbar-nav justify-content-center flex-row gap-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">الرئيسية</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">عن المدرسة</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#programs">البرامج التعليمية</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">الخدمات الالكترونية</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#news">الاخبار والفعاليات</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">اتصل بنا</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Left Buttons + Logo -->
+                <div class="col-lg-3 col-6">
+
+                    <div class="d-flex justify-content-end align-items-center gap-3">
+
+                        <button class=" search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                        <button class=" login-btn">
+                            <i class="fa-solid fa-lock"></i> تسجيل الدخول
+                        </button>
+
+                        <img src="img/second logo.png" alt="Logo" height="60">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- NAVBAR -->
+
+
+
+    <section class="hero">
+
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="img/hero.png" class="d-block w-100" alt="">
+
+                    <div class="carousel-caption">
+
+                        <div class="hero-content">
+
+                            <h5>مرحباً بكم في</h5>
+
+                            <h1>مدرسة الغد</h1>
+
+                            <p>
+                                بيئة تعليمية متميزة لإعداد جيل واعٍ ومبدع.
+                            </p>
+
+                            <button class="btn hero-btn">
+                                تعرف على المزيد
+                                <i class="fa-solid fa-chevron-left me-2"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/hero.png" class="d-block w-100" alt="">
+                    <div class="carousel-caption">
+
+                        <div class="hero-content">
+
+                            <h5>مرحباً بكم في</h5>
+
+                            <h1>مدرسة الغد</h1>
+
+                            <p>
+                                بيئة تعليمية متميزة لإعداد جيل واعٍ ومبدع.
+                            </p>
+
+                            <button class="btn hero-btn">
+                                تعرف على المزيد
+                                <i class="fa-solid fa-chevron-left me-2"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/hero.png" class="d-block w-100" alt="">
+
+                    <div class="carousel-caption">
+
+                        <div class="hero-content">
+
+                            <h5>مرحباً بكم في</h5>
+
+                            <h1>مدرسة الغد</h1>
+
+                            <p>
+                                بيئة تعليمية متميزة لإعداد جيل واعٍ ومبدع.
+                            </p>
+
+                            <button class="btn hero-btn">
+                                تعرف على المزيد
+                                <i class="fa-solid fa-chevron-left me-2"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Previous -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <!-- Next -->
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HERO -->
+
+
+    <section class="about-school py-5">
+
+        <div class="container">
+
+            <div class="row g-4 align-items-start">
+
+                <!-- ========================= -->
+                <!-- Statistics -->
+                <!-- ========================= -->
+
+                <div class="col-lg-3">
+
+                    <div class="statistics">
+
+                        <div class="statistics-title">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            <h3 class="section-title" style="font-size: 17px; color:#00B5AC;">
+                                إحصائيات المدرسة
+                            </h3>
+
+                        </div>
+
+
+                        <div class="stat-box">
+
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+
+                            <h6>إجمالي الطلاب</h6>
+
+                            <span class="counter" data-target="1200">0+</span>
+
+                        </div>
+
+
+                        <div class="stat-box">
+
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <h6>إجمالي الموظفين</h6>
+
+                            <span>60</span>
+
+                        </div>
+
+
+                        <div class="stat-box">
+
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-chalkboard"></i>
+                            </div>
+
+                            <h6>عدد الصفوف</h6>
+
+                            <span>33</span>
+
+                        </div>
+
+
+                        <div class="stat-box">
+
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-box-open"></i>
+                            </div>
+
+                            <h6>العهد المسلمة</h6>
+
+                            <span>78</span>
+
+                        </div>
+
+
+                        <div class="stat-box">
+
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+
+                            <h6>الإجازات الحالية</h6>
+
+                            <span>6</span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!-- ========================= -->
+                <!-- Welcome -->
+                <!-- ========================= -->
+
+                <div class="col-lg-5">
+
+                    <div class="welcome-box">
+
+
+                        <div class="welcome-header">
+
+                            <img src="img/second logo.png" alt="">
+
+                            <div class="welcome-content">
+
+                                <h3 class="section-title" style="color:#00B5AC;">
+                                    مرحبا بكم في مدرسة سوريا الغد
+                                </h3>
+
+                                <p class="welcome-text">
+                                    نسعى في مدرسة الفد إلى توفير بيئة تعليمية آمنة ومحفزة.
+                                    تساهم في تطوير مهارات الطلاب وبناء شخصياتهم
+                                    للمساهمة في بناء مجتمع مزدهر.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- FEATURES -->
+
+                        <div class="row row-cols-2 row-cols-lg-4 g-2 mt-3">
+
+
+                            <div class="col">
+                                <div class="feature-box">
+
+                                    <i class="fa-solid fa-graduation-cap"></i>
+
+                                    <h6>تعليم متميز</h6>
+
+                                    <p>مناهج حديثة وكوادر مؤهلة</p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="feature-box">
+
+                                    <i class="fa-solid fa-book"></i>
+
+                                    <h6>أنشطة متنوعة</h6>
+
+                                    <p>أنشطة رياضية وثقافية وفنية</p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="feature-box">
+
+                                    <i class="fa-solid fa-laptop"></i>
+
+                                    <h6>بيئة آمنة</h6>
+
+                                    <p>سلامة الطلاب أولويتنا</p>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col">
+                                <div class="feature-box">
+
+                                    <i class="fa-solid fa-trophy"></i>
+
+                                    <h6>قيم وأخلاق</h6>
+
+                                    <p>نزرع القيم ونبني شخصيات قوية</p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <button class="btn school-btn mt-4">
+                            تعرف على المدرسة
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+                <!-- ========================= -->
+                <!-- News -->
+                <!-- ========================= -->
+
+                <div class="col-lg-4">
+
+                    <div class="news-box">
+
+                        <div class="news-title">
+
+                            <i class="fa-solid fa-newspaper"></i>
+
+                            <h3 class="section-title" style="font-size: 17px; color:#00B5AC;">
+                                أحدث الأخبار والفعاليات
+                            </h3>
+
+                        </div>
+
+                        <div class="news-item">
+
+                            <img src="images/news1.jpg" alt="">
+
+                            <div>
+
+                                <h6>حفل تكريم أوائل الطلبة</h6>
+
+                                <p>تحت رعاية إدارة المدرسة تم تكريم أوائل الطلبة في المدارس</p>
+
+                                <small>2024/05/20</small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="news-item">
+
+                            <img src="images/news2.jpg" alt="">
+
+                            <div>
+
+                                <h6>رحلة علمية لطلاب الصف السادس</h6>
+
+                                <p>رحلة تعليمية ترفيهية إلى مختلف العلوم والتكنولوجيا</p>
+
+                                <small>2024/05/15</small>
+
+                            </div>
+
+                        </div>
+
+                        <div class="news-item">
+
+                            <img src="images/news3.jpg" alt="">
+
+                            <div>
+
+                                <h6>مسابقة القراءة العربية</h6>
+
+                                <p>إقامة مسابقة القراءة العربية بين طلاب المدرسة</p>
+
+                                <small>2024/05/10</small>
+
+                            </div>
+
+                        </div>
+
+                        <button class="btn news-btn mt-3">
+
+                            عرض جميع الأخبار
+
+                            <i class="fa-solid fa-chevron-left me-2"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ABOUT -->
+
+
+
+            <div class="features-bar">
+
+
+                <div class="feature-item">
+
+                    <div class="feature-head">
+                        <i class="fa-solid fa-eye"></i>
+
+                        <h5>رؤيتنا</h5>
+                    </div>
+
+                    <p>
+                        أن نكون منارة تعليمية رائدة في بناء جيل مبدع ومتميز.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <div class="feature-head">
+                        <i class="fa-solid fa-bullseye"></i>
+
+                        <h5>رسالتنا</h5>
+                    </div>
+
+                    <p>
+                        تقديم تعليم نوعي يلبي احتياجات الطلاب و يواكب تطلعات المستقبل.
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-item">
+
+                    <div class="feature-head">
+                        <i class="fa-solid fa-handshake"></i>
+
+                        <h5>قيمنا</h5>
+                    </div>
+
+                    <p>
+                        الإلتزام - التميز - التعاون - الإحترام - الإبداع
+                    </p>
+
+                </div>
+
+
+
+                <div class="feature-item special">
+
+                    <div class="feature-head">
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <h5>
+                            التعليم هو السلاح الأقوى الذي يمكنك إستخدامه لتغيير العالم
+                        </h5>
+                    </div>
+
+                    <p>
+                        نفتخر بإنجازات طلابنا وتميزهم المستمر
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+
+        <p>
+            © 2026 مدرسة سوريا الغد. جميع الحقوق محفوظة.
+        </p>
+
+    </footer>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
