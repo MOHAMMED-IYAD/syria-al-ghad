@@ -2089,3 +2089,301 @@ html {
     }
 
 }
+
+
+
+
+
+
+/*==================================
+        RESPONSIVE
+==================================*/
+
+/*==============================
+        LARGE DEVICES
+==============================*/
+@media (max-width:1200px){
+
+    .employee-container{
+        width:90%;
+    }
+
+    .employee-stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+}
+
+
+/*==============================
+        TABLETS
+==============================*/
+@media (max-width:991px){
+
+    .employee-container{
+        width:95%;
+    }
+
+    /* Navbar */
+    .employee-navbar{
+        padding:15px 0;
+    }
+
+    .employee-navbar-content{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .employee-logo{
+        justify-content:center;
+    }
+
+    .employee-actions{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    .employee-btn{
+        flex:1;
+        min-width:180px;
+    }
+
+    /* Statistics */
+    .employee-stats{
+        padding:40px 0;
+    }
+
+    .employee-stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .employee-stat-card{
+        padding:20px;
+    }
+
+    .employee-stat-number{
+        font-size:30px;
+    }
+
+    .employee-stat-icon{
+        width:65px;
+        height:65px;
+    }
+
+    .employee-stat-icon i{
+        font-size:28px;
+    }
+
+    /* Table */
+    .table-responsive{
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .employee-table{
+        min-width:1200px;
+    }
+
+}
+
+
+/*==============================
+        MOBILE
+==============================*/
+@media (max-width:768px){
+
+    .employee-container{
+        width:94%;
+    }
+
+    /* Navbar */
+
+    .employee-title{
+        font-size:20px;
+    }
+
+    .employee-logo i{
+        font-size:24px;
+    }
+
+    .employee-actions{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .employee-btn{
+        width:100%;
+        min-width:100%;
+    }
+
+    /* Statistics */
+
+    .employee-stats{
+        padding:30px 0;
+    }
+
+    .employee-stats-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .employee-stat-card{
+        padding:20px;
+    }
+
+    .employee-stat-number{
+        font-size:28px;
+    }
+
+    .employee-stat-title{
+        font-size:14px;
+    }
+
+    .employee-stat-text{
+        font-size:13px;
+    }
+
+    .employee-stat-icon{
+        width:60px;
+        height:60px;
+        border-radius:14px;
+    }
+
+    .employee-stat-icon i{
+        font-size:24px;
+    }
+
+    /* Table */
+
+    .employee-table-section{
+        padding:40px 0;
+    }
+
+    .employee-table-header{
+        text-align:center;
+    }
+
+    .employee-table-header h2{
+        width:100%;
+        font-size:20px;
+        padding:12px;
+    }
+
+    .employee-info{
+        gap:10px;
+    }
+
+    .employee-info img{
+        width:45px;
+        height:45px;
+    }
+
+    .employee-info h6{
+        font-size:14px;
+    }
+
+    .employee-info span{
+        font-size:12px;
+    }
+
+}
+
+
+/*==============================
+        SMALL MOBILE
+==============================*/
+@media (max-width:576px){
+
+    .employee-container{
+        width:95%;
+    }
+
+    .employee-title{
+        font-size:18px;
+    }
+
+    .employee-logo i{
+        font-size:22px;
+    }
+
+    .employee-logo{
+        gap:8px;
+    }
+
+    .employee-btn{
+        padding:12px 18px;
+        font-size:14px;
+    }
+
+    .employee-stat-card{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:18px;
+    }
+
+    .employee-stat-number{
+        font-size:24px;
+    }
+
+    .employee-stat-icon{
+        width:55px;
+        height:55px;
+    }
+
+    .employee-stat-icon i{
+        font-size:22px;
+    }
+
+    .employee-table-header h2{
+        font-size:18px;
+        padding:10px;
+    }
+
+}
+
+
+/*==============================
+        EXTRA SMALL
+==============================*/
+@media (max-width:400px){
+
+    .employee-container{
+        width:96%;
+    }
+
+    .employee-title{
+        font-size:17px;
+    }
+
+    .employee-logo i{
+        font-size:20px;
+    }
+
+    .employee-btn{
+        font-size:13px;
+        padding:11px 15px;
+    }
+
+    .employee-stat-card{
+        padding:18px;
+    }
+
+    .employee-stat-number{
+        font-size:22px;
+    }
+
+    .employee-stat-title{
+        font-size:13px;
+    }
+
+    .employee-stat-text{
+        font-size:12px;
+    }
+
+}
