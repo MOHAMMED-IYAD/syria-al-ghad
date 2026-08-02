@@ -151,7 +151,56 @@ html {
 
 }
 
+/* Mobile Navbar */
 
+.navbar-toggler {
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width:991.98px){
+
+    .navbar{
+        padding:15px 0;
+    }
+
+    .navbar-collapse{
+        background:#fff;
+        margin-top:15px;
+        border-radius:10px;
+        padding:15px;
+        box-shadow:0 8px 20px rgba(0,0,0,.08);
+    }
+
+    .navbar-nav .nav-link{
+        padding:12px 0;
+        text-align:center;
+    }
+
+    .navbar-collapse .login-btn{
+        width:140px;
+    }
+}
+/* Desktop */
+@media (min-width: 992px) {
+
+    #navbarMenu {
+        display: none !important;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 991.98px) {
+
+    .desktop-navbar {
+        display: none !important;
+    }
+
+}
 
 /*==================================
         HERO
