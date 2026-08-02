@@ -77,6 +77,3 @@ counters.forEach(counter => {
 
 
 // ABOUT
-
-
-
