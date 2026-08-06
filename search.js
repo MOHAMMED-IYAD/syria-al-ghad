@@ -67,6 +67,14 @@ const students = [
     },
 
     {
+        name: "رهف حبيبة محمد 😂😂😂😂",
+        grade: "الاول ",
+        section: "ب",
+        phone: "0599567890",
+        status: "منتظم"
+    },
+
+    {
         name: "مهدي القوقا ",
         grade: "الثاني ",
         section: "ب",
