@@ -10,13 +10,14 @@
     <title>Document</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- AOS -->
-    <link rel="stylesheet" href="css/aos.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
@@ -25,156 +26,188 @@
 
 <body>
 
+    <!-- ===================== NAVBAR ===================== -->
+     <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
 
+        <div class="container">
 
+            <!-- Mobile Header -->
+            <div class="d-flex d-lg-none align-items-center justify-content-between w-100">
 
+                <!-- Right Logo -->
+                <a href="index.html">
+                    <img class="logo" src="img/first logo.png" alt="School Logo" height="60">
+                </a>
 
-
-
-<nav class="employee-navbar">
-
-    <div class="employee-container">
-
-        <div class="employee-navbar-content">
-
-            <a href="#" class="employee-logo">
-
-    
-
-    <h3 class="employee-title">
-
-    <i class="fa-solid fa-chalkboard-user"></i>
-
-    شؤون المعلمين
-
-</h3>
-
-</a>
-
-            <div class="employee-actions">
-
-                <button class="employee-btn employee-btn-primary">
-
-                    <i class="fa-solid fa-plus"></i>
-
-                    إضافة معلم
-
+                <!-- Hamburger -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <button class="employee-btn employee-btn-outline">
+                <!-- Left Logo -->
+                <img src="img/second logo.png" alt="Logo" height="55">
 
-                    <i class="fa-solid fa-download"></i>
+            </div>
 
-                    تصدير البيانات
+            <!-- Desktop -->
+            <div class="row align-items-center w-100 d-none d-lg-flex">
 
-                </button>
+                <!-- Right Logo -->
+                <div class="col-lg-2">
+
+                    <a href="index.html" class="d-flex justify-content-start">
+                        <img class="logo" src="img/firstlogo.png" alt="School Logo" height="70">
+                    </a>
+
+                </div>
+
+                <!-- Center Navigation -->
+                <div class="col-lg-7">
+
+                    <ul class="navbar-nav justify-content-center flex-row gap-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="employee.html">شؤون المعلمين</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="formation.html">التشكيل المدرسي</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="permanent.html">العهد الدائمة</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#news">الأخبار والفعاليات</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">اتصل بنا</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Left Buttons -->
+                <div class="col-lg-3">
+
+                    <div class="d-flex justify-content-end align-items-center gap-3">
+
+                        <button class="search-btn">
+                            <a href="search.html">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </button>
+
+                        <button class="login-btn">
+                            <a href="#" style="text-decoration:none;color:white;">
+                                <i class="fa-solid fa-lock"></i> تسجيل الدخول
+                            </a>
+                        </button>
+
+                        <img src="img/secondlogo.png" alt="Logo" height="60">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="collapse navbar-collapse d-lg-none mt-3" id="navbarMenu">
+
+                <ul class="navbar-nav text-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="employee.html">شؤون المعلمين</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#school-structure">التشكيل المدرسي</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#subjects">المواد الدراسية</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">الأخبار والفعاليات</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">اتصل بنا</a>
+                    </li>
+
+                    <li class="mt-3 d-flex justify-content-center gap-2">
+
+                        <button class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                        <button class="login-btn">
+                            <a href="#" style="text-decoration:none;color:white;">
+                                <i class="fa-solid fa-lock"></i> تسجيل الدخول
+                            </a>
+                        </button>
+
+                    </li>
+
+                </ul>
 
             </div>
 
         </div>
 
-    </div>
-
-</nav>
+    </nav>
 
 
 
+    <nav class="employee-navbar">
 
+        <div class="employee-container">
 
+            <div class="employee-navbar-content">
 
+                <a href="#" class="employee-logo">
 
+                    <h3 class="employee-title">
 
+                        <i class="fa-solid fa-chalkboard-user"></i>
 
+                        شؤون المعلمين
 
+                    </h3>
 
+                </a>
 
+                <div class="employee-actions">
 
+                    <button class="employee-btn employee-btn-primary">
 
-<section class="employee-stats">
+                        <i class="fa-solid fa-plus"></i>
 
-    <div class="employee-container">
+                        إضافة معلم
 
-        <div class="employee-stats-grid">
+                    </button>
 
-            <!-- الإداريون -->
-            <div class="employee-stat-card">
+                    <button class="employee-btn employee-btn-outline">
 
-                <div class="employee-stat-content">
+                        <i class="fa-solid fa-download"></i>
 
-                    <span class="employee-stat-title">الإداريون</span>
+                        تصدير البيانات
 
-                    <h2 class="employee-stat-number">12</h2>
-
-                    <p class="employee-stat-text">موظف إداري</p>
-
-                </div>
-
-                <div class="employee-stat-icon">
-
-                    <i class="fa-solid fa-user-tie"></i>
-
-                </div>
-
-            </div>
-
-            <!-- المعلمات -->
-            <div class="employee-stat-card">
-
-                <div class="employee-stat-content">
-
-                    <span class="employee-stat-title">المعلمات (إناث)</span>
-
-                    <h2 class="employee-stat-number">30</h2>
-
-                    <p class="employee-stat-text">معلمة</p>
-
-                </div>
-
-                <div class="employee-stat-icon">
-
-                    <i class="fa-solid fa-person-dress"></i>
-
-                </div>
-
-            </div>
-
-            <!-- المعلمون -->
-            <div class="employee-stat-card">
-
-                <div class="employee-stat-content">
-
-                    <span class="employee-stat-title">المعلمون (ذكور)</span>
-
-                    <h2 class="employee-stat-number">18</h2>
-
-                    <p class="employee-stat-text">معلم</p>
-
-                </div>
-
-                <div class="employee-stat-icon">
-
-                    <i class="fa-solid fa-person-chalkboard"></i>
-
-                </div>
-
-            </div>
-
-            <!-- إجمالي المعلمين -->
-            <div class="employee-stat-card">
-
-                <div class="employee-stat-content">
-
-                    <span class="employee-stat-title">إجمالي المعلمين</span>
-
-                    <h2 class="employee-stat-number">48</h2>
-
-                    <p class="employee-stat-text">معلم ومعلمة</p>
-
-                </div>
-
-                <div class="employee-stat-icon">
-
-                    <i class="fa-solid fa-school"></i>
+                    </button>
 
                 </div>
 
@@ -182,508 +215,485 @@
 
         </div>
 
-    </div>
-
-</section>
+    </nav>
 
 
+    <section class="employee-stats">
 
+        <div class="employee-container">
 
+            <div class="employee-stats-grid">
 
+                <!-- الإداريون -->
+                <div class="employee-stat-card">
 
+                    <div class="employee-stat-content">
 
+                        <span class="employee-stat-title">الإداريون</span>
 
+                        <h2 class="employee-stat-number">5</h2>
 
+                        <p class="employee-stat-text">موظف إداري</p>
 
+                    </div>
 
+                    <div class="employee-stat-icon">
 
+                        <i class="fa-solid fa-user-tie"></i>
 
+                    </div>
 
+                </div>
 
+                <!-- المعلمات -->
+                <div class="employee-stat-card">
 
+                    <div class="employee-stat-content">
 
+                        <span class="employee-stat-title">المعلمات (إناث)</span>
 
+                        <h2 class="employee-stat-number">41</h2>
 
-<!--==================================
-        EMPLOYEE TABLE
-===================================-->
+                        <p class="employee-stat-text">معلمة</p>
 
-<section class="employee-table-section">
+                    </div>
 
-    <div class="employee-container">
+                    <div class="employee-stat-icon">
 
-        <div class="employee-table-header">
+                        <i class="fa-solid fa-person-dress"></i>
 
-            <h2 class="employee-section-title">
-    <i class="fa-solid fa-users"></i>
-    قائمة المعلمين
-</h2>
+                    </div>
+
+                </div>
+
+                <!-- المعلمون -->
+                <div class="employee-stat-card">
+
+                    <div class="employee-stat-content">
+
+                        <span class="employee-stat-title">المعلمون (ذكور)</span>
+
+                        <h2 class="employee-stat-number">4</h2>
+
+                        <p class="employee-stat-text">معلم</p>
+
+                    </div>
+
+                    <div class="employee-stat-icon">
+
+                        <i class="fa-solid fa-person-chalkboard"></i>
+
+                    </div>
+
+                </div>
+
+                <!-- إجمالي المعلمين -->
+                <div class="employee-stat-card">
+
+                    <div class="employee-stat-content">
+
+                        <span class="employee-stat-title">إجمالي المعلمين</span>
+
+                        <h2 class="employee-stat-number">50</h2>
+
+                        <p class="employee-stat-text">معلم ومعلمة</p>
+
+                    </div>
+
+                    <div class="employee-stat-icon">
+
+                        <i class="fa-solid fa-school"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="employee-table-wrapper">
+    </section>
 
-            <div class="table-responsive">
 
-                <table class="table employee-table align-middle">
+    <!--==================================
+            EMPLOYEE TABLE
+    ==================================-->
 
-                    <thead>
+    <section class="employee-table-section">
 
-                        <tr>
-                            <th>المعلم</th>
-                            <th>المادة</th>
-                            <th>المرحلة</th>
-                            <th>الجنس</th>
-                            <th>رقم الهاتف</th>
-                            <th>البريد الإلكتروني</th>
-                            <th>تاريخ التعيين</th>
-                            <th>الإجراءات</th>
-                        </tr>
+        <div class="employee-container">
 
-                    </thead>
+            <div class="employee-table-header">
 
-                    <tbody>
+                <h2 class="employee-section-title">
+                    <i class="fa-solid fa-users"></i>
+                    قائمة المعلمين
+                </h2>
 
-                        <!-- الصف الأول -->
+            </div>
 
-                        <tr>
+            <div class="employee-table-wrapper">
 
-                            <td>
+                <div class="table-responsive">
 
-                                <div class="employee-info">
+                    <table class="table employee-table align-middle">
 
-                                    <i class="fa-solid fa-chalkboard-user" style="font-size: 24px; color: #00B5AC;"></i>
+                        <thead>
 
-                                    <div>
+                            <tr>
+                                <th>المعلم</th>
+                                <th>المادة</th>
+                                <th>المرحلة</th>
+                                <th>الجنس</th>
+                                <th>رقم الهاتف</th>
+                                <th>البريد الإلكتروني</th>
+                                <th>تاريخ التعيين</th>
+                                <th>الإجراءات</th>
+                            </tr>
 
-                                        <h6>محمد أحمد</h6>
+                        </thead>
 
-                                        <span>معلم رياضيات</span>
+                        <tbody>
+
+                            <!-- الصف الأول -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="employee-info">
+
+                                        <i class="fa-solid fa-chalkboard-user" style="font-size: 24px; color: #00B5AC;"></i>
+
+                                        <div>
+
+                                            <h6>محمد أحمد</h6>
+
+                                            <span>معلم رياضيات</span>
+
+                                        </div>
 
                                     </div>
 
-                                </div>
+                                </td>
 
-                            </td>
+                                <td>الرياضيات</td>
 
-                            <td>الرياضيات</td>
+                                <td>الثانوية</td>
 
-                            <td>الثانوية</td>
+                                <td>
+                                    <span class="employee-gender employee-male">ذكر</span>
+                                </td>
 
-                            <td>
-    <span class="employee-gender employee-male">ذكر</span>
-</td>
+                                <td>0599123456</td>
 
-                            <td>0599123456</td>
+                                <td>mohamed@gmail.com</td>
 
-                            <td>mohamed@gmail.com</td>
+                                <td>12/08/2021</td>
 
-                            <td>12/08/2021</td>
+                                <td>
 
-                            <td>
+                                    <div class="employee-table-actions">
 
-                                <div class="employee-table-actions">
+                                        <button class="btn employee-view-btn">
 
-                                    <button class="btn employee-view-btn">
+                                            <i class="fa-solid fa-eye"></i>
 
-                                        <i class="fa-solid fa-eye"></i>
+                                        </button>
 
-                                    </button>
+                                        <button class="btn employee-edit-btn">
 
-                                    <button class="btn employee-edit-btn">
+                                            <i class="fa-solid fa-pen"></i>
 
-                                        <i class="fa-solid fa-pen"></i>
+                                        </button>
 
-                                    </button>
+                                        <button class="btn employee-delete-btn">
 
-                                    <button class="btn employee-delete-btn">
+                                            <i class="fa-solid fa-trash"></i>
 
-                                        <i class="fa-solid fa-trash"></i>
-
-                                    </button>
-
-                                </div>
-
-                            </td>
-
-                        </tr>
-
-                        <!-- الصف الثاني -->
-
-                        <tr>
-
-                            <td>
-
-                                <div class="employee-info">
-
-                                    <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #e91e63;"></i>
-
-                                    <div>
-
-                                        <h6>سارة خالد</h6>
-
-                                        <span>معلمة علوم</span>
+                                        </button>
 
                                     </div>
 
-                                </div>
+                                </td>
 
-                            </td>
+                            </tr>
 
-                            <td>العلوم</td>
+                            <!-- الصف الثاني -->
 
-                            <td>الإعدادية</td>
+                            <tr>
 
-                            <td>
-    <span class="employee-gender employee-female">أنثى</span>
-</td>
+                                <td>
 
-                            <td>0599345678</td>
+                                    <div class="employee-info">
 
-                            <td>sara@gmail.com</td>
+                                        <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #e91e63;"></i>
 
-                            <td>05/10/2020</td>
+                                        <div>
 
-                            <td>
+                                            <h6>سارة خالد</h6>
 
-                                <div class="employee-table-actions">
+                                            <span>معلمة علوم</span>
 
-                                    <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
-
-                                    <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
-
-                                    <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
-
-                                </div>
-
-                            </td>
-
-                        </tr>
-
-                        <!-- الصف الثالث -->
-
-                        <tr>
-
-                            <td>
-
-                                <div class="employee-info">
-
-                                    <i class="fa-solid fa-chalkboard-user" style="font-size: 24px; color: #00B5AC;"></i>
-
-                                    <div>
-
-                                        <h6>أحمد يوسف</h6>
-
-                                        <span>معلم لغة عربية</span>
+                                        </div>
 
                                     </div>
 
-                                </div>
+                                </td>
 
-                            </td>
+                                <td>العلوم</td>
 
-                            <td>اللغة العربية</td>
+                                <td>الإعدادية</td>
 
-                            <td>الابتدائية</td>
+                                <td>
+                                    <span class="employee-gender employee-female">أنثى</span>
+                                </td>
 
-                            <td>
-    <span class="employee-gender employee-male">ذكر</span>
-</td>
+                                <td>0599345678</td>
 
-                            <td>0599567890</td>
+                                <td>sara@gmail.com</td>
 
-                            <td>ahmed@gmail.com</td>
+                                <td>05/10/2020</td>
 
-                            <td>18/02/2019</td>
+                                <td>
 
-                            <td>
+                                    <div class="employee-table-actions">
 
-                                <div class="employee-table-actions">
+                                        <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
 
-                                    <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
 
-                                    <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
-
-                                    <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
-
-                                </div>
-
-                            </td>
-
-                        </tr>
-                                                <!-- الصف الرابع -->
-
-                        <tr>
-
-                            <td>
-
-                                <div class="employee-info">
-
-                                    <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #e91e63;"></i>
-
-                                    <div>
-
-                                        <h6>ريم حسن</h6>
-
-                                        <span>معلمة لغة إنجليزية</span>
+                                        <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
 
                                     </div>
 
-                                </div>
+                                </td>
 
-                            </td>
+                            </tr>
 
-                            <td>اللغة الإنجليزية</td>
+                            <!-- الصف الثالث -->
 
-                            <td>الثانوية</td>
+                            <tr>
 
-                            <td>
-    <span class="employee-gender employee-female">أنثى</span>
-</td>
+                                <td>
 
-                            <td>0599678901</td>
+                                    <div class="employee-info">
 
-                            <td>reem@gmail.com</td>
+                                        <i class="fa-solid fa-chalkboard-user" style="font-size: 24px; color: #00B5AC;"></i>
 
-                            <td>01/09/2022</td>
+                                        <div>
 
-                            <td>
+                                            <h6>أحمد يوسف</h6>
 
-                                <div class="employee-table-actions">
+                                            <span>معلم لغة عربية</span>
 
-                                    <button class="btn employee-view-btn">
+                                        </div>
 
-                                        <i class="fa-solid fa-eye"></i>
+                                    </div>
 
-                                    </button>
+                                </td>
 
-                                    <button class="btn employee-edit-btn">
+                                <td>اللغة العربية</td>
 
-                                        <i class="fa-solid fa-pen"></i>
+                                <td>الابتدائية</td>
 
-                                    </button>
+                                <td>
+                                    <span class="employee-gender employee-male">ذكر</span>
+                                </td>
 
-                                    <button class="btn employee-delete-btn">
+                                <td>0599567890</td>
 
-                                        <i class="fa-solid fa-trash"></i>
+                                <td>ahmed@gmail.com</td>
 
-                                    </button>
+                                <td>18/02/2019</td>
 
-                                </div>
+                                <td>
 
-                            </td>
+                                    <div class="employee-table-actions">
 
-                        </tr>
+                                        <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
 
-                        <!-- الصف الخامس -->
+                                        <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
 
-                        <tr>
+                                        <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
 
-                            <td>
+                                    </div>
 
-                              
+                                </td>
 
+                            </tr>
 
-    <div class="employee-info">
-        <i class="fa-solid fa-chalkboard-user" style="font-size:24px;color:#00B5AC;"></i>
+                            <!-- الصف الرابع -->
 
-        <div>
-            <h6>خالد علي</h6>
-            <span>معلم فيزياء</span>
-        </div>
-    </div>
+                            <tr>
 
+                                <td>
 
-<td>الفيزياء</td>
+                                    <div class="employee-info">
 
-<td>الثانوية</td>
+                                        <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #e91e63;"></i>
 
-<td>
-    <span class="employee-gender employee-male">ذكر</span>
-</td>
+                                        <div>
 
-<td>0599789012</td>
+                                            <h6>ريم حسن</h6>
 
-<td>khaled@gmail.com</td>
+                                            <span>معلمة لغة إنجليزية</span>
 
-<td>11/01/2018</td>
+                                        </div>
 
-<td>
+                                    </div>
 
-    <div class="employee-table-actions">
+                                </td>
 
-        <button class="btn employee-view-btn">
-            <i class="fa-solid fa-eye"></i>
-        </button>
+                                <td>اللغة الإنجليزية</td>
 
-        <button class="btn employee-edit-btn">
-            <i class="fa-solid fa-pen"></i>
-        </button>
+                                <td>الثانوية</td>
 
-        <button class="btn employee-delete-btn">
-            <i class="fa-solid fa-trash"></i>
-        </button>
+                                <td>
+                                    <span class="employee-gender employee-female">أنثى</span>
+                                </td>
 
-    </div>
+                                <td>0599678901</td>
 
-</td>
+                                <td>reem@gmail.com</td>
 
-</tr>
-<!-- الصف السادس -->
-<tr>
-    <td>
-        <div class="employee-info">
-            <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #e91e63;"></i>
-            <div>
-                <h6>نور محمد</h6>
-                <span>معلمة حاسوب</span>
-            </div>
-        </div>
-    </td>
-    <td>الحاسوب</td>
-    <td>الإعدادية</td>
-    <td><span class="employee-gender employee-female">أنثى</span></td>
-    <td>0599112233</td>
-    <td>noor@gmail.com</td>
-    <td>15/03/2021</td>
-    <td>
-        <div class="employee-table-actions">
-            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
-            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
-            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
-        </div>
-    </td>
-</tr>
+                                <td>01/09/2022</td>
 
-<!-- الصف السابع -->
-<tr>
-    <td>
-        <div class="employee-info">
-            <i class="fa-solid fa-chalkboard-user" style="font-size: 24px; color: #00B5AC;"></i>
-            <div>
-                <h6>عمر محمود</h6>
-                <span>معلم كيمياء</span>
-            </div>
-        </div>
-    </td>
-    <td>الكيمياء</td>
-    <td>الثانوية</td>
-    <td><span class="employee-gender employee-male">ذكر</span></td>
-    <td>0599223344</td>
-    <td>omar@gmail.com</td>
-    <td>20/08/2019</td>
-    <td>
-        <div class="employee-table-actions">
-            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
-            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
-            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
-        </div>
-    </td>
-</tr>
+                                <td>
 
-<!-- الصف الثامن -->
-<tr>
-    <td>
-        <div class="employee-info">
-            <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #e91e63;"></i>
-            <div>
-                <h6>لينا أحمد</h6>
-                <span>معلمة تربية إسلامية</span>
-            </div>
-        </div>
-    </td>
-    <td>التربية الإسلامية</td>
-    <td>الابتدائية</td>
-    <td><span class="employee-gender employee-female">أنثى</span></td>
-    <td>0599334455</td>
-    <td>lina@gmail.com</td>
-    <td>10/02/2022</td>
-    <td>
-        <div class="employee-table-actions">
-            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
-            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
-            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
-        </div>
-    </td>
-</tr>
+                                    <div class="employee-table-actions">
 
-<!-- الصف التاسع -->
-<tr>
-    <td>
-        <div class="employee-info">
-            <i class="fa-solid fa-chalkboard-user" style="font-size: 24px; color: #00B5AC;"></i>
-            <div>
-                <h6>يوسف سمير</h6>
-                <span>معلم تاريخ</span>
-            </div>
-        </div>
-    </td>
-    <td>التاريخ</td>
-    <td>الإعدادية</td>
-    <td><span class="employee-gender employee-male">ذكر</span></td>
-    <td>0599445566</td>
-    <td>yousef@gmail.com</td>
-    <td>14/09/2020</td>
-    <td>
-        <div class="employee-table-actions">
-            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
-            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
-            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
-        </div>
-    </td>
-</tr>
+                                        <button class="btn employee-view-btn">
 
-<!-- الصف العاشر -->
-<tr>
-    <td>
-        <div class="employee-info">
-            <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #e91e63;"></i>
-            <div>
-                <h6>هبة سعيد</h6>
-                <span>معلمة جغرافيا</span>
-            </div>
-        </div>
-    </td>
-    <td>الجغرافيا</td>
-    <td>الثانوية</td>
-    <td><span class="employee-gender employee-female">أنثى</span></td>
-    <td>0599556677</td>
-    <td>heba@gmail.com</td>
-    <td>07/11/2018</td>
-    <td>
-        <div class="employee-table-actions">
-            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
-            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
-            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
-        </div>
-    </td>
-</tr>
+                                            <i class="fa-solid fa-eye"></i>
 
-<!-- الصف الحادي عشر -->
-<tr>
-    <td>
-        <div class="employee-info">
-            <i class="fa-solid fa-chalkboard-user" style="font-size: 24px; color: #00B5AC;"></i>
-            <div>
-                <h6>إبراهيم ناصر</h6>
-                <span>معلم أحياء</span>
-            </div>
-        </div>
-    </td>
-    <td>الأحياء</td>
-    <td>الثانوية</td>
-    <td><span class="employee-gender employee-male">ذكر</span></td>
-    <td>0599667788</td>
-    <td>ibrahim@gmail.com</td>
-    <td>22/04/2021</td>
-    <td>
-        <div class="employee-table-actions">
-            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
-            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
-            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
-        </div>
-    </td>
-</tr>
+                                        </button>
+
+                                        <button class="btn employee-edit-btn">
+
+                                            <i class="fa-solid fa-pen"></i>
+
+                                        </button>
+
+                                        <button class="btn employee-delete-btn">
+
+                                            <i class="fa-solid fa-trash"></i>
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                            <!-- الصف الخامس -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="employee-info">
+                                        <i class="fa-solid fa-chalkboard-user" style="font-size:24px;color:#00B5AC;"></i>
+
+                                        <div>
+                                            <h6>خالد علي</h6>
+                                            <span>معلم فيزياء</span>
+                                        </div>
+                                    </div>
+
+                                </td>
+
+                                <td>الفيزياء</td>
+
+                                <td>الثانوية</td>
+
+                                <td>
+                                    <span class="employee-gender employee-male">ذكر</span>
+                                </td>
+
+                                <td>0599789012</td>
+
+                                <td>khaled@gmail.com</td>
+
+                                <td>11/01/2018</td>
+
+                                <td>
+
+                                    <div class="employee-table-actions">
+
+                                        <button class="btn employee-view-btn">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+
+                                        <button class="btn employee-edit-btn">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </button>
+
+                                        <button class="btn employee-delete-btn">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                            <!-- الصف السادس -->
+                            <tr>
+                                <td>
+                                    <div class="employee-info">
+                                        <i class="fa-solid fa-person-dress" style="font-size: 24px; color: #e91e63;"></i>
+                                        <div>
+                                            <h6>نور محمد</h6>
+                                            <span>معلمة حاسوب</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>الحاسوب</td>
+                                <td>الإعدادية</td>
+                                <td><span class="employee-gender employee-female">أنثى</span></td>
+                                <td>0599112233</td>
+                                <td>noor@gmail.com</td>
+                                <td>15/03/2021</td>
+                                <td>
+                                    <div class="employee-table-actions">
+                                        <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- الصف السابع -->
+                            <tr>
+                                <td>
+                                    <div class="employee-info">
+                                        <i class="fa-solid fa-chalkboard-user" style="font-size: 24px; color: #00B5AC;"></i>
+                                        <div>
+                                            <h6>عمر محمود</h6>
+                                            <span>معلم كيمياء</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>الكيمياء</td>
+                                <td>الثانوية</td>
+                                <td><span class="employee-gender employee-male">ذكر</span></td>
+                                <td>0599223344</td>
+                                <td>omar@gmail.com</td>
+                                <td>20/08/2019</td>
+                                <td>
+                                    <div class="employee-table-actions">
+                                        <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+                                        <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+                                        <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- الصف الثامن -->
+                            <!--  -->
 
 <!-- الصف الثاني عشر -->
 <tr>
@@ -789,6 +799,266 @@
     </td>
 </tr>
 
+
+<!-- الصف الجديد 1 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>هبة محمود</h6>
+                <span>معلمة جغرافيا</span>
+            </div>
+        </div>
+    </td>
+    <td>الجغرافيا</td>
+    <td>الإعدادية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111001</td>
+    <td>heba@gmail.com</td>
+    <td>11/09/2022</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 2 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>لينا أحمد</h6>
+                <span>معلمة تاريخ</span>
+            </div>
+        </div>
+    </td>
+    <td>التاريخ</td>
+    <td>الثانوية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111002</td>
+    <td>lina@gmail.com</td>
+    <td>15/02/2021</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 3 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>إيمان يوسف</h6>
+                <span>معلمة أحياء</span>
+            </div>
+        </div>
+    </td>
+    <td>الأحياء</td>
+    <td>الثانوية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111003</td>
+    <td>eman@gmail.com</td>
+    <td>20/03/2020</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 4 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>نسرين علي</h6>
+                <span>معلمة كيمياء</span>
+            </div>
+        </div>
+    </td>
+    <td>الكيمياء</td>
+    <td>الثانوية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111004</td>
+    <td>nesreen@gmail.com</td>
+    <td>01/08/2019</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 5 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>رنا خالد</h6>
+                <span>معلمة تربية إسلامية</span>
+            </div>
+        </div>
+    </td>
+    <td>التربية الإسلامية</td>
+    <td>الابتدائية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111005</td>
+    <td>rana@gmail.com</td>
+    <td>10/11/2023</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 6 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>ميس عبد الله</h6>
+                <span>معلمة لغة إنجليزية</span>
+            </div>
+        </div>
+    </td>
+    <td>اللغة الإنجليزية</td>
+    <td>الإعدادية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111006</td>
+    <td>mais@gmail.com</td>
+    <td>18/04/2022</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 7 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>أسماء حسن</h6>
+                <span>معلمة رياض أطفال</span>
+            </div>
+        </div>
+    </td>
+    <td>رياض الأطفال</td>
+    <td>الابتدائية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111007</td>
+    <td>asmaa@gmail.com</td>
+    <td>05/05/2021</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 8 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>سلمى جمال</h6>
+                <span>معلمة رياضيات</span>
+            </div>
+        </div>
+    </td>
+    <td>الرياضيات</td>
+    <td>الثانوية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111008</td>
+    <td>salma@gmail.com</td>
+    <td>12/06/2020</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 9 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>وفاء سعيد</h6>
+                <span>معلمة علوم</span>
+            </div>
+        </div>
+    </td>
+    <td>العلوم</td>
+    <td>الإعدادية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111009</td>
+    <td>wafaa@gmail.com</td>
+    <td>22/10/2018</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
+
+<!-- الصف الجديد 10 -->
+<tr>
+    <td>
+        <div class="employee-info">
+            <i class="fa-solid fa-person-dress" style="font-size:24px;color:#e91e63;"></i>
+            <div>
+                <h6>شهد إبراهيم</h6>
+                <span>معلمة لغة عربية</span>
+            </div>
+        </div>
+    </td>
+    <td>اللغة العربية</td>
+    <td>الابتدائية</td>
+    <td><span class="employee-gender employee-female">أنثى</span></td>
+    <td>0599111010</td>
+    <td>shahd@gmail.com</td>
+    <td>14/01/2024</td>
+    <td>
+        <div class="employee-table-actions">
+            <button class="btn employee-view-btn"><i class="fa-solid fa-eye"></i></button>
+            <button class="btn employee-edit-btn"><i class="fa-solid fa-pen"></i></button>
+            <button class="btn employee-delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+    </td>
+</tr>
                                 
                                
                             </td>
@@ -807,14 +1077,7 @@
 
 </section>
 
-<div class="employee-back-home">
 
-    <a href="index.html" class="employee-home-btn">
-        <i class="fa-solid fa-house"></i>
-        العودة إلى الصفحة الرئيسية
-    </a>
-
-</div>
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>

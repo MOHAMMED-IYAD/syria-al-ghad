@@ -1,13 +1,7 @@
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
-// عند الضغط على أي رابط
-navLinks.forEach(link => {
-    link.addEventListener("click", function () {
-        navLinks.forEach(item => item.classList.remove("active"));
-        this.classList.add("active");
-    });
-});
+
 
 // عند السكروول
 const observer = new IntersectionObserver((entries) => {
