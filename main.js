@@ -1,73 +1,56 @@
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-link");
 
-
-
 // عند السكروول
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => link.classList.remove("active"));
 
-            navLinks.forEach(link => link.classList.remove("active"));
+        const activeLink = document.querySelector(
+          `.nav-link[href="#${entry.target.id}"]`,
+        );
 
-            const activeLink = document.querySelector(
-                `.nav-link[href="#${entry.target.id}"]`
-            );
-
-            if (activeLink) {
-                activeLink.classList.add("active");
-            }
+        if (activeLink) {
+          activeLink.classList.add("active");
         }
+      }
     });
-}, {
-    threshold: 0.5
-});
+  },
+  {
+    threshold: 0.5,
+  },
+);
 
-sections.forEach(section => observer.observe(section));
-
-
+sections.forEach((section) => observer.observe(section));
 
 // NAVBAR
 
-
-
 // HERO
-
-
 
 const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
+counters.forEach((counter) => {
+  const target = +counter.dataset.target;
 
-    const target = +counter.dataset.target;
+  let count = 0;
 
-    let count = 0;
+  const updateCounter = () => {
+    const increment = target / 100;
 
-    const updateCounter = () => {
+    if (count < target) {
+      count += increment;
 
-        const increment = target / 100;
+      counter.innerText = Math.ceil(count) + (target >= 1000 ? "+" : "");
 
-        if (count < target) {
+      setTimeout(updateCounter, 5);
+    } else {
+      counter.innerText = target + (target >= 1000 ? "+" : "");
+    }
+  };
 
-            count += increment;
-
-            counter.innerText = Math.ceil(count) + (target >= 1000 ? "+" : "");
-
-            setTimeout(updateCounter, 5);
-
-        } else {
-
-            counter.innerText = target + (target >= 1000 ? "+" : "");
-
-        }
-
-    };
-
-
-    updateCounter();
-
+  updateCounter();
 });
-
-
 
 // ABOUT
