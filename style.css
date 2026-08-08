@@ -1069,60 +1069,118 @@
 
 
 /* ==========================
-        Contact Section
+        CONTACT / FOOTER
 ========================== */
 
-
-footer{
-    background:linear-gradient(135deg,#08B0A8,#13a4c7);
-    color:#fff;
+.footer {
+    background: linear-gradient(135deg, #08B0A8, #13A4C7);
+    color: #fff;
+    width: 100%;
 }
 
-.containeri{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
+.containeri {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
 
-    display:grid;
-    grid-template-columns:320px 320px 1fr;
-    justify-content:space-between;
-    column-gap:90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    gap: 50px;
 
-    padding:45px 0;
+    padding: 50px 0;
 }
 
-.box{
-    text-align:right;
+.containeri .box {
+    text-align: right;
 }
 
-.box h2{
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:20px;
+.containeri .box h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.box p{
-    font-size:19px;
-    line-height:2;
+.containeri .box p {
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 10px;
 }
 
-.box i{
-    margin-left:8px;
-    color:#fff;
+.containeri .box i {
+    margin-left: 8px;
+    color: #fff;
 }
 
-iframe{
-    width:100%;
-    height:220px;
-    border:none;
-    border-radius:15px;
+.containeri iframe {
+    display: block;
+    width: 100%;
+    height: 280px;
+    border: 0;
+    border-radius: 15px;
 }
 
-.copy{
-    text-align:center;
-    padding:18px;
-    background:#08B0A8;
-    font-size:15px;
+.copy {
+    width: 100%;
+    text-align: center;
+    padding: 18px;
+    background: #08AFA8;
+    font-size: 15px;
+}
+
+
+/* ==========================
+        TABLET
+========================== */
+
+@media (max-width: 991px) {
+
+    .containeri {
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .containeri .box:last-child {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* ==========================
+        MOBILE
+========================== */
+
+@media (max-width: 576px) {
+
+    .containeri {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .containeri .box:last-child {
+        grid-column: auto;
+    }
+
+    .containeri .box h2 {
+        font-size: 21px;
+    }
+
+    .containeri .box p {
+        font-size: 15px;
+    }
+
+    .containeri iframe {
+        height: 250px;
+    }
+
+    .copy {
+        font-size: 13px;
+        padding: 15px 10px;
+    }
+
 }
 
 
