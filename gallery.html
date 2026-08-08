@@ -35,53 +35,108 @@
 
    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
 
-    <div class="container">
+        <div class="container">
 
-        <!-- Mobile Header -->
-        <div class="d-flex d-lg-none align-items-center justify-content-between w-100">
+            <!-- Mobile Header -->
+            <div class="d-flex d-lg-none align-items-center justify-content-between w-100">
 
-            <!-- Right Logo -->
-            <a href="index.html">
-                <img class="logo" src="img/firstlogo.png" alt="School Logo" height="60">
-            </a>
+                <!-- Right Logo -->
+                <a href="index.html">
+                    <img class="logo" src="img/firstlogo.png" alt="School Logo" height="60">
+                </a>
 
-            <!-- Hamburger -->
-            <button class="navbar-toggler border-0 shadow-none"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarMenu"
-                    aria-controls="navbarMenu"
-                    aria-expanded="false"
+                <!-- Hamburger -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
                     aria-label="Toggle navigation">
 
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
 
-            </button>
+                </button>
 
-            <!-- Left Logo -->
-            <img src="img/secondlogo.png" alt="Logo" height="55">
-
-        </div>
-
-        <!-- Desktop -->
-        <div class="row align-items-center w-100 d-none d-lg-flex">
-
-            <!-- Right Logo -->
-            <div class="col-lg-2">
-
-                <a href="index.html" class="d-flex justify-content-start">
-                    <img class="logo" src="img/firstlogo.png" alt="School Logo" height="70">
-                </a>
+                <!-- Left Logo -->
+                <img src="img/secondlogo.png" alt="Logo" height="55">
 
             </div>
 
-            <!-- Navigation -->
-            <div class="col-lg-7">
+            <!-- Desktop -->
+            <div class="row align-items-center w-100 d-none d-lg-flex">
 
-                <ul class="navbar-nav justify-content-center flex-row gap-4">
+                <!-- Right Logo -->
+                <div class="col-lg-2">
+
+                    <a href="index.html" class="d-flex justify-content-start">
+                        <img class="logo" src="img/firstlogo.png" alt="School Logo" height="70">
+                    </a>
+
+                </div>
+
+                <!-- Navigation -->
+                <div class="col-lg-7">
+
+                    <ul class="navbar-nav justify-content-center flex-row gap-4">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="employee.html">شؤون المعلمين</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="formation.html">التشكيل المدرسي</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="permanent.html">العهد الدائمة</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="gallery.html">الأخبار والفعاليات</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">اتصل بنا</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Left Side -->
+                <div class="col-lg-3">
+
+                    <div class="d-flex justify-content-end align-items-center gap-3">
+
+                        <button class="search-btn">
+                            <a href="search.html">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </button>
+
+                        <button class="login-btn">
+                            <a href="#" style="text-decoration:none;color:white;">
+                                <i class="fa-solid fa-lock"></i>
+                                تسجيل الدخول
+                            </a>
+                        </button>
+
+                        <img src="img/secondlogo.png" alt="Logo" height="60">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="collapse navbar-collapse d-lg-none mt-3" id="navbarMenu">
+
+                <ul class="navbar-nav text-center">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">الرئيسية</a>
+                        <a class="nav-link " href="index.html">الرئيسية</a>
                     </li>
 
                     <li class="nav-item">
@@ -104,89 +159,30 @@
                         <a class="nav-link" href="index.html#contact">اتصل بنا</a>
                     </li>
 
+                    <li class="mt-3 d-flex justify-content-center gap-2">
+
+                        <button class="search-btn">
+                            <a href="search.html">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </button>
+
+                        <button class="login-btn">
+                            <a href="#" style="text-decoration:none;color:white;">
+                                <i class="fa-solid fa-lock"></i>
+                                تسجيل الدخول
+                            </a>
+                        </button>
+
+                    </li>
+
                 </ul>
 
             </div>
 
-            <!-- Left Side -->
-            <div class="col-lg-3">
-
-                <div class="d-flex justify-content-end align-items-center gap-3">
-
-                    <button class="search-btn">
-                        <a href="search.html">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
-                    </button>
-
-                    <button class="login-btn">
-                        <a href="#" style="text-decoration:none;color:white;">
-                            <i class="fa-solid fa-lock"></i>
-                            تسجيل الدخول
-                        </a>
-                    </button>
-
-                    <img src="img/secondlogo.png" alt="Logo" height="60">
-
-                </div>
-
-            </div>
-
         </div>
 
-        <!-- Mobile Menu -->
-        <div class="collapse navbar-collapse d-lg-none mt-3" id="navbarMenu">
-
-            <ul class="navbar-nav text-center">
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">الرئيسية</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="employee.html">شؤون المعلمين</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="formation.html">التشكيل المدرسي</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="permanent.html">العهد الدائمة</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#news">الأخبار والفعاليات</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#contact">اتصل بنا</a>
-                </li>
-
-                <li class="mt-3 d-flex justify-content-center gap-2">
-
-                    <button class="search-btn">
-                        <a href="search.html">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
-                    </button>
-
-                    <button class="login-btn">
-                        <a href="#" style="text-decoration:none;color:white;">
-                            <i class="fa-solid fa-lock"></i>
-                            تسجيل الدخول
-                        </a>
-                    </button>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
+    </nav>
 
 
 
@@ -1229,6 +1225,357 @@
 
 
 
+<article class="gallery-card" data-category="activities">
+    <img src="img/18.jpeg" alt="فعاليات المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>فعاليات المخيم</h3>
+        <p>أجواء مليئة بالحماس والنشاط</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="games">
+    <img src="img/19.jpeg" alt="ألعاب جماعية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ألعاب جماعية</h3>
+        <p>لحظات من المرح والتحدي</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="trips">
+    <img src="img/20.jpeg" alt="رحلة المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>رحلة مميزة</h3>
+        <p>اكتشاف أماكن جديدة مع الأصدقاء</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="workshops">
+    <img src="img/21.jpeg" alt="ورش المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ورشة تعليمية</h3>
+        <p>تجربة جديدة مليئة بالتعلم</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="closing">
+    <img src="img/22.jpeg" alt="ختام المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ذكريات الختام</h3>
+        <p>لحظات جميلة لا تُنسى</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="games">
+    <img src="img/23.jpeg" alt="مسابقات المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>مسابقات وتحديات</h3>
+        <p>روح المنافسة والحماس</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="activities">
+    <img src="img/24.jpeg" alt="نشاط جماعي" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>نشاط جماعي</h3>
+        <p>مشاركة وتعاون بين الجميع</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="trips">
+    <img src="img/25.jpeg" alt="استكشاف المكان" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>جولة استكشافية</h3>
+        <p>مغامرة جديدة وممتعة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="workshops">
+    <img src="img/26.jpeg" alt="ورشة إبداعية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ورشة إبداعية</h3>
+        <p>تعلم ومهارات جديدة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="activities">
+    <img src="img/27.jpeg" alt="نشاط المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>وقت النشاط</h3>
+        <p>حماس وطاقة إيجابية</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="closing">
+    <img src="img/28.jpeg" alt="ذكريات المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ذكريات جميلة</h3>
+        <p>صور من أجمل لحظات المخيم</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="games">
+    <img src="img/29.jpeg" alt="لعبة جماعية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>لعبة جماعية</h3>
+        <p>ضحك وحماس بين المشاركين</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="trips">
+    <img src="img/30.jpeg" alt="مغامرة المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>مغامرة جديدة</h3>
+        <p>يوم مليء بالمغامرات</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="activities">
+    <img src="img/31.jpeg" alt="فعالية المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>فعالية مميزة</h3>
+        <p>لحظات من النشاط والحيوية</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="workshops">
+    <img src="img/32.jpeg" alt="ورشة المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ورشة المخيم</h3>
+        <p>التعلم بطريقة ممتعة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="games">
+    <img src="img/33.jpeg" alt="تحديات المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>تحديات ممتعة</h3>
+        <p>التعاون والمنافسة في أجواء رائعة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="closing">
+    <img src="img/34.jpeg" alt="نهاية المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>نهاية الرحلة</h3>
+        <p>لحظات مؤثرة من الختام</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="activities">
+    <img src="img/35.jpeg" alt="نشاط ترفيهي" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>نشاط ترفيهي</h3>
+        <p>متعة وحيوية طوال اليوم</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="trips">
+    <img src="img/36.jpeg" alt="رحلة جماعية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>رحلة جماعية</h3>
+        <p>يوم مليء بالذكريات</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="games">
+    <img src="img/37.jpeg" alt="ألعاب المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ألعاب المخيم</h3>
+        <p>أجواء من الضحك والمرح</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="workshops">
+    <img src="img/38.jpeg" alt="نشاط تعليمي" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>نشاط تعليمي</h3>
+        <p>اكتساب المعرفة بطريقة ممتعة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="closing">
+    <img src="img/39.jpeg" alt="ذكريات الختام" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ذكريات الختام</h3>
+        <p>نهاية جميلة لأيام مميزة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="activities">
+    <img src="img/40.jpeg" alt="فعاليات جماعية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>فعاليات جماعية</h3>
+        <p>الجميع يشارك ويستمتع</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="trips">
+    <img src="img/41.jpeg" alt="جولة في المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>جولة ممتعة</h3>
+        <p>استكشاف وتجارب جديدة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="games">
+    <img src="img/42.jpeg" alt="مسابقة جماعية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>مسابقة جماعية</h3>
+        <p>حماس وتنافس بين الفرق</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="workshops">
+    <img src="img/43.jpeg" alt="ورشة عملية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ورشة عملية</h3>
+        <p>تجربة عملية ومهارات جديدة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="activities">
+    <img src="img/44.jpeg" alt="نشاط تفاعلي" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>نشاط تفاعلي</h3>
+        <p>مشاركة وتفاعل من الجميع</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="closing">
+    <img src="img/45.jpeg" alt="حفل الختام" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>حفل الختام</h3>
+        <p>احتفال بنهاية أيام المخيم</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="trips">
+    <img src="img/46.jpeg" alt="رحلة استكشافية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>رحلة استكشافية</h3>
+        <p>مغامرة وتجربة لا تُنسى</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="games">
+    <img src="img/47.jpeg" alt="ألعاب وتحديات" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ألعاب وتحديات</h3>
+        <p>حماس وضحك وروح الفريق</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="activities">
+    <img src="img/48.jpeg" alt="فعالية خاصة" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>فعالية خاصة</h3>
+        <p>لحظة مميزة من أيام المخيم</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="workshops">
+    <img src="img/49.jpeg" alt="ورشة جماعية" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ورشة جماعية</h3>
+        <p>التعلم والعمل بروح الفريق</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="closing">
+    <img src="img/50.jpeg" alt="لحظة الوداع" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>لحظة الوداع</h3>
+        <p>نهاية أيام مليئة بالذكريات</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="games">
+    <img src="img/51.jpeg" alt="أجواء المنافسة" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>أجواء المنافسة</h3>
+        <p>تحديات ممتعة وروح رياضية</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+<article class="gallery-card" data-category="closing">
+    <img src="img/52.jpeg" alt="ختام المخيم" loading="lazy">
+    <div class="gallery-overlay">
+        <h3>ختام المخيم</h3>
+        <p>ذكرى أخيرة من رحلة جميلة</p>
+        <a href="#" class="gallery-btn"><i class="fa-solid fa-expand"></i></a>
+    </div>
+</article>
+
+
+
 
     </div>
 
@@ -1560,289 +1907,7 @@
 
 
 
-  <!-- ==========================
-     Contact Section
-========================== -->
-
-<section class="contact-section" id="contact">
-
-    <div class="container">
-
-        <div class="section-heading text-center">
-
-            <span class="section-subtitle">
-                تواصل معنا
-            </span>
-
-            <h2 class="section-title">
-                نحن هنا لمساعدتك
-            </h2>
-
-            <p class="section-description">
-                يمكنك التواصل معنا في أي وقت وسنكون سعداء بالرد عليك
-            </p>
-
-        </div>
-
-
-        <div class="row align-items-stretch g-4">
-
-
-            <!-- Contact Form -->
-
-            <div class="col-lg-6">
-
-
-                <div class="contact-form">
-
-
-                    <h3>
-                        أرسل لنا رسالة
-                    </h3>
-
-
-                    <form>
-
-
-                        <div class="row">
-
-
-                            <div class="col-md-6">
-
-                                <input 
-                                type="text" 
-                                placeholder="الاسم الكامل"
-                                required>
-
-                            </div>
-
-
-
-                            <div class="col-md-6">
-
-                                <input 
-                                type="email" 
-                                placeholder="البريد الإلكتروني"
-                                required>
-
-                            </div>
-
-
-
-                            <div class="col-md-6">
-
-                                <input 
-                                type="text" 
-                                placeholder="رقم الهاتف">
-
-                            </div>
-
-
-
-                            <div class="col-md-6">
-
-                                <input 
-                                type="text" 
-                                placeholder="العنوان">
-
-                            </div>
-
-
-                            <div class="col-12">
-
-                                <textarea 
-                                placeholder="اكتب رسالتك..."
-                                rows="5"></textarea>
-
-                            </div>
-
-
-                            <div class="col-12">
-
-                                <button type="submit">
-
-                                    إرسال الرسالة
-
-                                    <i class="fa-solid fa-paper-plane"></i>
-
-                                </button>
-
-                            </div>
-
-
-                        </div>
-
-
-                    </form>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-            <!-- Map -->
-
-            <div class="col-lg-6">
-
-
-                <div class="map-box">
-
-
-                    <iframe
-                    src="https://www.google.com/maps/embed"
-                    loading="lazy">
-                    </iframe>
-
-
-                </div>
-
-
-            </div>
-
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-
-
-
-
-
-<!-- ==========================
-          Footer
-========================== -->
-
-
-<footer class="footer">
-
-
-    <div class="container">
-
-
-        <div class="row g-4">
-
-
-            <div class="col-lg-4">
-
-
-                <h3>
-                    اسم الموقع
-                </h3>
-
-
-                <p>
-                    نقدم أفضل الخدمات بجودة عالية
-                    ونحرص دائماً على رضا العملاء.
-                </p>
-
-
-            </div>
-
-
-
-            <div class="col-lg-4">
-
-
-                <h3>
-                    روابط سريعة
-                </h3>
-
-
-                <ul>
-
-                    <li>
-                        <a href="#">
-                            الرئيسية
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="#">
-                            عن المدرسة
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="#">
-                            الخدمات
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="#">
-                            تواصل معنا
-                        </a>
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-
-
-            <div class="col-lg-4">
-
-
-                <h3>
-                    معلومات التواصل
-                </h3>
-
-
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    القاهرة - مصر
-                </p>
-
-
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    01000000000
-                </p>
-
-
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    info@example.com
-                </p>
-
-
-            </div>
-
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <div class="copyright">
-
-
-        © 2026 جميع الحقوق محفوظة -
-        اسم الموقع
-
-
-    </div>
-
-
-</footer>
-
+ 
 
 
 
