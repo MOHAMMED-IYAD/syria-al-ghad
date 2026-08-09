@@ -125,11 +125,11 @@
 .search-btn i {
 
     font-size: 14px;
-    color: #00B5AC !important;
+    color: #fff !important;
 
 }
 
-.login-btn {
+.search-btn {
 
     width: 120px;
 
@@ -152,7 +152,7 @@
 }
 
 
-.login-btn:hover {
+.search-btn:hover {
 
     background: #00A19B;
 
@@ -187,7 +187,7 @@
         text-align: center;
     }
 
-    .navbar-collapse .login-btn {
+    .navbar-collapse .search-btn {
         width: 140px;
     }
 }
@@ -1367,7 +1367,7 @@
 
 
 
-    .login-btn {
+    .search-btn {
 
         width: 100px;
 

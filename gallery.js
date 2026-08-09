@@ -1,507 +1,764 @@
+
 "use strict";
 
-/*==================================================
-    APP INITIALIZATION
-==================================================*/
+/*==================================================*
+*APP INITIALIZATION*
+*==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
-  initGalleryFilter();
 
-  initHeroScroll();
+    initGalleryFilter();
 
-  initSmoothScroll();
+    initGalleryOrder();
 
-  initActiveNavbar();
+    initHeroScroll();
 
-  initCounter();
+    initSmoothScroll();
 
-  initScrollReveal();
+    initActiveNavbar();
 
-  initLightbox();
+    initCounter();
 
-  initBackToTop();
+    initScrollReveal();
 
-  initNavbarScroll();
+    initLightbox();
 
-  initGalleryHover();
+    initBackToTop();
 
-  initLazyLoading();
+    initNavbarScroll();
+
+    initGalleryHover();
+
+    initLazyLoading();
+
 });
 
-/*==================================================
-    HELPERS
-==================================================*/
+
+/*==================================================*
+*HELPERS*
+*==================================================*/
 
 const $ = (selector) => document.querySelector(selector);
 
 const $$ = (selector) => document.querySelectorAll(selector);
 
-/*==================================================
-    GALLERY FILTER
-==================================================*/
+
+/*==================================================*
+*GALLERY FILTER*
+*==================================================*/
 
 const initGalleryFilter = () => {
-  const buttons = $$(".gallery-filters .btn");
 
-  const cards = $$(".gallery-card");
+    const buttons = $$(".gallery-filters .btn");
 
-  if (!buttons.length || !cards.length) return;
+    const cards = $$(".gallery-card");
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      buttons.forEach((btn) => {
-        btn.classList.remove("active");
-      });
+    if (!buttons.length || !cards.length) return;
 
-      button.classList.add("active");
 
-      const category = button.dataset.filter;
+    buttons.forEach((button) => {
 
-      cards.forEach((card) => {
-        const cardCategory = card.dataset.category;
+        button.addEventListener("click", () => {
 
-        if (category === "all" || cardCategory === category) {
-          card.style.display = "block";
+            buttons.forEach((btn) => {
 
-          setTimeout(() => {
-            card.style.opacity = "1";
+                btn.classList.remove("active");
 
-            card.style.transform = "translateY(0)";
-          }, 50);
-        } else {
-          card.style.opacity = "0";
+            });
 
-          card.style.transform = "translateY(30px)";
 
-          setTimeout(() => {
-            card.style.display = "none";
-          }, 300);
-        }
-      });
-    });
-  });
-};
+            button.classList.add("active");
 
-/*==================================================
-    HERO BUTTON SCROLL
-==================================================*/
 
-const initHeroScroll = () => {
-  const button = $(".hero-btn");
+            const category = button.dataset.filter;
 
-  const target = $("#gallery");
 
-  if (!button || !target) return;
+            cards.forEach((card) => {
 
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
+                const cardCategory = card.dataset.category;
 
-    target.scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-};
 
-/*==================================================
-    SMOOTH SCROLL
-==================================================*/
+                if (
+                    category === "all" ||
+                    cardCategory === category
+                ) {
 
-const initSmoothScroll = () => {
-  document.addEventListener("click", (e) => {
-    const link = e.target.closest('a[href^="#"]');
+                    card.style.display = "block";
 
-    if (!link) return;
 
-    const id = link.getAttribute("href");
+                    setTimeout(() => {
 
-    const target = document.querySelector(id);
+                        card.style.opacity = "1";
 
-    if (!target) return;
+                        card.style.transform =
+                            "translateY(0)";
 
-    e.preventDefault();
+                    }, 50);
 
-    target.scrollIntoView({
-      behavior: "smooth",
 
-      block: "start",
-    });
-  });
-};
+                } else {
 
-/*==================================================
-    ACTIVE NAVBAR
-==================================================*/
+                    card.style.opacity = "0";
 
-const initActiveNavbar = () => {
-  const links = $$(".navbar .nav-link");
+                    card.style.transform =
+                        "translateY(30px)";
 
-  if (!links.length) return;
 
-  const sections = [];
+                    setTimeout(() => {
 
-  links.forEach((link) => {
-    const href = link.getAttribute("href");
+                        card.style.display = "none";
 
-    if (!href || !href.startsWith("#")) return;
+                    }, 300);
 
-    const section = document.querySelector(href);
+                }
 
-    if (section) {
-      sections.push({
-        link,
+            });
 
-        section,
-      });
-    }
-  });
-
-  if (!sections.length) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        sections.forEach((item) => {
-          item.link.classList.remove("active");
         });
 
-        const current = sections.find((item) => item.section === entry.target);
+    });
 
-        if (current) {
-          current.link.classList.add("active");
-        }
-      });
-    },
-    {
-      threshold: 0.3,
-
-      rootMargin: "-100px 0px -40%",
-    },
-  );
-
-  sections.forEach((item) => {
-    observer.observe(item.section);
-  });
 };
 
-/*==================================================
-    STATISTICS COUNTER
-==================================================*/
+
+/*==================================================*
+*GALLERY ORDER
+*==================================================*/
+
+const initGalleryOrder = () => {
+
+    const gallery = $(".gallery-masonry");
+
+    if (!gallery) return;
+
+
+    const cards = Array.from(
+        gallery.querySelectorAll(".gallery-card")
+    );
+
+
+    /*
+        نحفظ ترتيب الكروت حسب ترتيبها
+        في HTML.
+
+        هذا يمنع أي كود آخر من
+        تغيير ترتيبها.
+    */
+
+    cards.forEach((card, index) => {
+
+        card.dataset.galleryOrder = index;
+
+    });
+
+
+    /*
+        نعيد إدخال العناصر بنفس ترتيب
+        الـHTML الأصلي.
+    */
+
+    cards
+        .sort(
+            (a, b) =>
+                Number(a.dataset.galleryOrder) -
+                Number(b.dataset.galleryOrder)
+        )
+        .forEach((card) => {
+
+            gallery.appendChild(card);
+
+        });
+
+};
+
+
+/*==================================================*
+*HERO BUTTON SCROLL*
+*==================================================*/
+
+const initHeroScroll = () => {
+
+    const button = $(".hero-btn");
+
+    const target = $("#gallery");
+
+
+    if (!button || !target) return;
+
+
+    button.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+
+        target.scrollIntoView({
+
+            behavior: "smooth",
+
+        });
+
+    });
+
+};
+
+
+/*==================================================*
+*SMOOTH SCROLL*
+*==================================================*/
+
+const initSmoothScroll = () => {
+
+    document.addEventListener("click", (e) => {
+
+        const link =
+            e.target.closest('a[href^="#"]');
+
+
+        if (!link) return;
+
+
+        const id =
+            link.getAttribute("href");
+
+
+        if (!id || id === "#") return;
+
+
+        const target =
+            document.querySelector(id);
+
+
+        if (!target) return;
+
+
+        e.preventDefault();
+
+
+        target.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start",
+
+        });
+
+    });
+
+};
+
+
+/*==================================================*
+*ACTIVE NAVBAR*
+*==================================================*/
+
+const initActiveNavbar = () => {
+
+    const links =
+        $$(".navbar .nav-link");
+
+
+    if (!links.length) return;
+
+
+    const sections = [];
+
+
+    links.forEach((link) => {
+
+        const href =
+            link.getAttribute("href");
+
+
+        if (
+            !href ||
+            !href.startsWith("#")
+        ) return;
+
+
+        const section =
+            document.querySelector(href);
+
+
+        if (section) {
+
+            sections.push({
+
+                link,
+
+                section,
+
+            });
+
+        }
+
+    });
+
+
+    if (!sections.length) return;
+
+
+    const observer =
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (!entry.isIntersecting)
+                        return;
+
+
+                    sections.forEach((item) => {
+
+                        item.link.classList.remove(
+                            "active"
+                        );
+
+                    });
+
+
+                    const current =
+                        sections.find(
+                            (item) =>
+                                item.section ===
+                                entry.target
+                        );
+
+
+                    if (current) {
+
+                        current.link.classList.add(
+                            "active"
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+
+                threshold: 0.3,
+
+                rootMargin:
+                    "-100px 0px -40%",
+
+            }
+
+        );
+
+
+    sections.forEach((item) => {
+
+        observer.observe(item.section);
+
+    });
+
+};
+
+
+/*==================================================*
+*STATISTICS COUNTER*
+*==================================================*/
 
 const initCounter = () => {
-  const counters = $$(".stat-number");
 
-  if (!counters.length) return;
+    const counters =
+        $$(".stat-number");
 
-  counters.forEach((counter) => {
-    const text = counter.textContent;
 
-    const number = parseInt(
-      text.replace(/[^\d]/g, ""),
+    if (!counters.length) return;
 
-      10,
-    );
 
-    const suffix = text.replace(/[0-9]/g, "");
+    counters.forEach((counter) => {
 
-    if (!number) return;
+        const text =
+            counter.textContent;
 
-    let started = false;
 
-    const animate = () => {
-      if (started) return;
+        const number =
+            parseInt(
+                text.replace(/[^\d]/g, ""),
+                10
+            );
 
-      started = true;
 
-      let current = 0;
+        const suffix =
+            text.replace(/[0-9]/g, "");
 
-      const duration = 1600;
 
-      const increment = number / (duration / 16);
+        if (!number) return;
 
-      const timer = setInterval(() => {
-        current += increment;
 
-        if (current >= number) {
-          current = number;
+        let started = false;
 
-          clearInterval(timer);
-        }
 
-        counter.textContent = Math.floor(current) + suffix;
-      }, 16);
-    };
+        const animate = () => {
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          animate();
+            if (started) return;
 
-          observer.disconnect();
-        }
-      },
-      {
-        threshold: 0.5,
-      },
-    );
 
-    observer.observe(counter);
-  });
+            started = true;
+
+
+            let current = 0;
+
+
+            const duration = 1600;
+
+
+            const increment =
+                number /
+                (duration / 16);
+
+
+            const timer =
+                setInterval(() => {
+
+                    current += increment;
+
+
+                    if (current >= number) {
+
+                        current = number;
+
+                        clearInterval(timer);
+
+                    }
+
+
+                    counter.textContent =
+                        Math.floor(current) +
+                        suffix;
+
+                }, 16);
+
+        };
+
+
+        const observer =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    if (
+                        entries[0].isIntersecting
+                    ) {
+
+                        animate();
+
+                        observer.disconnect();
+
+                    }
+
+                },
+
+                {
+
+                    threshold: 0.5,
+
+                }
+
+            );
+
+
+        observer.observe(counter);
+
+    });
+
 };
-/*==================================================
-    SCROLL REVEAL
-==================================================*/
+
+
+/*==================================================*
+*SCROLL REVEAL*
+*==================================================*/
 
 const initScrollReveal = () => {
-  const elements = $$(
-    ".stat-card," +
-      ".gallery-card," +
-      ".memory-content," +
-      ".memory-image," +
-      ".cta-section",
-  );
 
-  if (!elements.length) return;
+    const elements = $$(
+        ".stat-card," +
+        ".gallery-card," +
+        ".memory-content," +
+        ".memory-image," +
+        ".cta-section"
+    );
 
-  elements.forEach((el) => {
-    el.classList.add("reveal");
-  });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
+    if (!elements.length) return;
 
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.15,
-    },
-  );
 
-  elements.forEach((el) => {
-    observer.observe(el);
-  });
+    elements.forEach((el) => {
+
+        el.classList.add("reveal");
+
+    });
+
+
+    const observer =
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "active"
+                        );
+
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+
+            {
+
+                threshold: 0.15,
+
+            }
+
+        );
+
+
+    elements.forEach((el) => {
+
+        observer.observe(el);
+
+    });
+
 };
 
-/*==================================================
-    LIGHTBOX
-==================================================*/
+
+/*==================================================*
+*LIGHTBOX*
+*==================================================*/
 
 const initLightbox = () => {
-  const buttons = $$(".gallery-btn");
+const buttons = $$(".gallery-btn");
 
-  if (!buttons.length) return;
+if (!buttons.length) return;
 
-  const lightbox = document.createElement("div");
+const lightbox = document.createElement("div");
 
-  lightbox.className = "gallery-lightbox";
+lightbox.className = "gallery-lightbox";
 
-  lightbox.innerHTML = `
+lightbox.innerHTML = `
 
-        <button class="gallery-close">
+    <button class="gallery-close">
 
-            <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark"></i>
 
-        </button>
+    </button>
 
 
-        <img src="" alt="Gallery Image">
+    <img src="" alt="Gallery Image">
+
+`;
+
+document.body.appendChild(lightbox);
+
+const image = lightbox.querySelector("img");
+
+const close = lightbox.querySelector(".gallery-close");
+
+buttons.forEach((button) => {
+button.addEventListener("click", (e) => {
+e.preventDefault();
+
+  e.stopPropagation();
+
+  const card = button.closest(".gallery-card");
+
+  const img = card.querySelector("img");
+
+  if (!img) return;
+
+  image.src = img.src;
+
+  lightbox.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+});
+});
+
+const closeBox = () => {
+lightbox.classList.remove("active");
+
+document.body.style.overflow = "";
+};
+
+close.addEventListener("click", closeBox);
+
+lightbox.addEventListener("click", (e) => {
+if (e.target === lightbox) {
+closeBox();
+}
+});
+
+document.addEventListener("keydown", (e) => {
+if (e.key === "Escape") {
+closeBox();
+}
+});
+};
+
+
+/*==================================================*
+*BACK TO TOP*
+*==================================================*/
+
+const initBackToTop = () => {
+let button = $(".back-to-top");
+
+if (!button) {
+button = document.createElement("button");
+
+button.className = "back-to-top";
+
+button.innerHTML = `
+
+        <i class="fa-solid fa-arrow-up"></i>
 
     `;
 
-  document.body.appendChild(lightbox);
+document.body.appendChild(button);
+}
 
-  const image = lightbox.querySelector("img");
-
-  const close = lightbox.querySelector(".gallery-close");
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      e.stopPropagation();
-
-      const card = button.closest(".gallery-card");
-
-      const img = card.querySelector("img");
-
-      if (!img) return;
-
-      image.src = img.src;
-
-      lightbox.classList.add("active");
-
-      document.body.style.overflow = "hidden";
-    });
-  });
-
-  const closeBox = () => {
-    lightbox.classList.remove("active");
-
-    document.body.style.overflow = "";
-  };
-
-  close.addEventListener("click", closeBox);
-
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeBox();
-    }
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeBox();
-    }
-  });
-};
-
-/*==================================================
-    BACK TO TOP
-==================================================*/
-
-const initBackToTop = () => {
-  let button = $(".back-to-top");
-
-  if (!button) {
-    button = document.createElement("button");
-
-    button.className = "back-to-top";
-
-    button.innerHTML = `
-
-            <i class="fa-solid fa-arrow-up"></i>
-
-        `;
-
-    document.body.appendChild(button);
-  }
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 500) {
-      button.classList.add("show");
-    } else {
-      button.classList.remove("show");
-    }
-  });
-
-  button.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-
-      behavior: "smooth",
-    });
-  });
-};
-
-/*==================================================
-    NAVBAR SCROLL EFFECT
-==================================================*/
-
-const initNavbarScroll = () => {
-  const header = $(".site-header");
-
-  if (!header) return;
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-};
-
-/*==================================================
-    IMAGE HOVER 3D EFFECT
-==================================================*/
-
-const initGalleryHover = () => {
-  const cards = $$(".gallery-card");
-
-  if (!cards.length) return;
-
-  cards.forEach((card) => {
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-
-      const x = e.clientX - rect.left;
-
-      const y = e.clientY - rect.top;
-
-      const rotateY = (x / rect.width - 0.5) * 8;
-
-      const rotateX = (y / rect.height - 0.5) * -8;
-
-      card.style.transform = `
-
-                perspective(900px)
-
-                rotateX(${rotateX}deg)
-
-                rotateY(${rotateY}deg)
-
-                translateY(-8px)
-
-            `;
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "";
-    });
-  });
-};
-
-/*==================================================
-    LAZY IMAGE EFFECT
-==================================================*/
-
-const initLazyLoading = () => {
-  const images = $$("img[loading='lazy']");
-
-  if (!images.length) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("loaded");
-
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      rootMargin: "100px",
-    },
-  );
-
-  images.forEach((img) => {
-    observer.observe(img);
-  });
-};
-
-/*==================================================
-    WINDOW RESIZE
-==================================================*/
-
-window.addEventListener("resize", () => {
-  document.documentElement.style.setProperty(
-    "--window-width",
-
-    `${window.innerWidth}px`,
-  );
+window.addEventListener("scroll", () => {
+if (window.scrollY > 500) {
+button.classList.add("show");
+} else {
+button.classList.remove("show");
+}
 });
 
-/*==================================================
-    PAGE LOADED
-==================================================*/
+button.addEventListener("click", () => {
+window.scrollTo({
+top: 0,
+
+  behavior: "smooth",
+});
+});
+};
+
+
+/*==================================================*
+*NAVBAR SCROLL EFFECT*
+*==================================================*/
+
+const initNavbarScroll = () => {
+const header = $(".site-header");
+
+if (!header) return;
+
+window.addEventListener("scroll", () => {
+if (window.scrollY > 50) {
+header.classList.add("scrolled");
+} else {
+header.classList.remove("scrolled");
+}
+});
+};
+
+
+/*==================================================*
+*IMAGE HOVER 3D EFFECT*
+*==================================================*/
+
+const initGalleryHover = () => {
+const cards = $$(".gallery-card");
+
+if (!cards.length) return;
+
+cards.forEach((card) => {
+card.addEventListener("mousemove", (e) => {
+const rect = card.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+
+  const y = e.clientY - rect.top;
+
+  const rotateY = (x / rect.width - 0.5) * 8;
+
+  const rotateX = (y / rect.height - 0.5) * -8;
+
+  card.style.transform = `
+
+            perspective(900px)
+
+            rotateX(${rotateX}deg)
+
+            rotateY(${rotateY}deg)
+
+            translateY(-8px)
+
+        `;
+});
+
+card.addEventListener("mouseleave", () => {
+  card.style.transform = "";
+});
+});
+};
+
+
+/*==================================================*
+*LAZY IMAGE EFFECT*
+*==================================================*/
+
+const initLazyLoading = () => {
+const images = $$("img[loading='lazy']");
+
+if (!images.length) return;
+
+const observer = new IntersectionObserver(
+(entries) => {
+entries.forEach((entry) => {
+if (entry.isIntersecting) {
+entry.target.classList.add("loaded");
+
+      observer.unobserve(entry.target);
+    }
+  });
+},
+{
+  rootMargin: "100px",
+}
+);
+
+images.forEach((img) => {
+observer.observe(img);
+});
+};
+
+
+/*==================================================*
+*WINDOW RESIZE*
+*==================================================*/
+
+window.addEventListener("resize", () => {
+document.documentElement.style.setProperty(
+"--window-width",
+
+`${window.innerWidth}px`,
+);
+});
+
+
+/*==================================================*
+*PAGE LOADED*
+*==================================================*/
 
 window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
+document.body.classList.add("loaded");
 });
