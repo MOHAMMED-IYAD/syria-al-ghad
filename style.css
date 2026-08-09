@@ -2291,6 +2291,44 @@
 }
 
 
+
+
+/* ========================== Copyright Bar ========================== */
+.copyright-bar {
+    width: 100%;
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 16px 15px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.copyright-bar p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.copyright-bar span {
+    margin: 0 8px;
+    color: #64748b;
+}
+
+.copyright-bar a {
+    color: #00b5ac;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.copyright-bar a:hover {
+    color: #ffffff;
+}
+
+
+
+
+
 /*==================================
         RESPONSIVE
 ==================================*/

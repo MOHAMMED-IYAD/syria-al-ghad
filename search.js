@@ -51,7 +51,7 @@ const students = [
     },
 
     {
-        name: "_رهف شعت_",
+        name: " رهف شعت ",
         grade: "الحادي عشر",
         section: "ب",
         phone: "0599567890",
