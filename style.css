@@ -905,43 +905,36 @@
 
 
 .news-btn {
-
     background: #fff;
-
     color: #00B5AC;
-
     padding: 12px 35px;
-
     font-size: 16px;
-
     font-weight: 600;
-
     border: 2px solid #00B5AC;
-
     border-radius: 10px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 8px;
-
+    width: fit-content;
     margin: 20px auto 0;
-
-    transition: .3s;
-
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-
-
 .news-btn:hover {
-
     background: #00B5AC;
-
     color: #fff;
+    transform: translateY(-2px);
+}
 
+.news-btn i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.news-btn:hover i {
+    transform: translateX(-4px);
 }
 
 
